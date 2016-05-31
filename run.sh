@@ -12,7 +12,7 @@ if [ "$XDEBUG_HOST_IP" ]; then
         echo "xdebug.remote_port=9001" >> /etc/php/7.0/fpm/conf.d/20-xdebug.ini
     fi
 else
-    apt-get -y remove php7.0-xdebug
+    mv /etc/php/7.0/fpm/conf.d/20-xdebug.ini /etc/php/7.0/fpm/conf.d/20-xdebug.i
 fi
 
 if [ "$TIMEZONE" ]; then
