@@ -23,7 +23,7 @@ else
     echo "date.timezone = 'UTC'" >> /etc/php/7.0/cli/conf.d/php.ini
 fi
 
-/usr/sbin/php-fpm7.0 --allow-to-run-as-root -c /etc/php/7.0/fpm
+service php7.0-fpm start
 
 memcached -u memcache -d -m 30 -l 0.0.0.0 -p 11211
 
